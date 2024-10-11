@@ -10,6 +10,12 @@
 <body>
     <div class="container">
         <button onclick="openJivoChat()" class="comprovante-btn">Enviar Comprovante</button>
+
+        <div class="pix-container">
+            <span class="pix-emoji">🔑</span>
+            <span id="pix-key">ec617a41-08d0-4c7e-b7b2-ff07d9f73998</span>
+            <button onclick="copyPixKey()" class="copy-btn">Copiar Chave</button>
+        </div>
     </div>
 
     <script>
@@ -19,6 +25,15 @@
             } else {
                 alert("Chat indisponível no momento.");
             }
+        }
+
+        function copyPixKey() {
+            var pixKey = document.getElementById("pix-key").textContent;
+            navigator.clipboard.writeText(pixKey).then(() => {
+                alert("Chave Pix copiada!");
+            }).catch(err => {
+                console.log('Erro ao copiar', err);
+            });
         }
     </script>
 </body>
