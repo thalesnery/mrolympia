@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento MR OLYMPIA 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pagamento da Live MR OLYMPIA 2024</h1>
+        <p>Utilize a chave Pix abaixo para realizar o pagamento:</p>
+        <p>Chave Pix Aleatória</p>
+        <div class="pix-container">
+            <span class="pix-emoji">🔑</span>
+            <span id="pix-key">123e4567-e89b-12d3-a456-426614174000</span>
+            <button onclick="copyPixKey()" class="copy-btn">Copiar Chave</button>
+        </div>
+        <p class="instructions">Após o pagamento, mande o comprovante do pagamento no meu WhatsApp e seu acesso à nossa live do MR OLYMPIA 2024 será liberado.</p>
+        <a href="https://wa.me/5561981975214" class="whatsapp-btn">Enviar comprovante no WhatsApp</a>
+    </div>
+
+    <script>
+        function copyPixKey() {
+            var pixKey = document.getElementById("pix-key").textContent;
+            navigator.clipboard.writeText(pixKey).then(() => {
+                alert("Chave Pix copiada!");
+            }).catch(err => {
+                console.log('Erro ao copiar', err);
+            });
+        }
+    </script>
+</body>
+</html>
