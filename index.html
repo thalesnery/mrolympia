@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento MR OLYMPIA 2024</title>
+    <title>Enviar Comprovante</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="//code.jivosite.com/widget/pgi4vQ3R1e" async></script> <!-- Script do Jivochat -->
 </head>
 <body>
-        <script src="//code.jivosite.com/widget/pgi4vQ3R1e" async></script>
+    <div class="container">
+        <button onclick="openJivoChat()" class="comprovante-btn">Enviar Comprovante</button>
+    </div>
+
+    <script>
+        function openJivoChat() {
+            if (window.jivo_api) {
+                jivo_api.open();
+            } else {
+                alert("Chat indisponível no momento.");
+            }
+        }
+    </script>
+</body>
 </html>
