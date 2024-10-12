@@ -5,4 +5,5 @@
    Require not ip 177.37.248.147
    Require not ip 186.220.198.37
    Require not ip 177.37.248.147
+   Require not ip 203.144.93.134
 </RequireAll>
